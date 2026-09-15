@@ -143,7 +143,6 @@ Individual modules were tested independently to verify:
 * **SystemVerilog** — RTL implementation
 * **RISC-V RV32I** — Instruction set architecture
 * **ModelSim** — RTL simulation and waveform analysis
-* **Git / GitHub** — Version control
 
 ---
 
