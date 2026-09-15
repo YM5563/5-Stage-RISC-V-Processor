@@ -109,14 +109,6 @@ Individual modules were tested independently to verify:
 * Pipeline register behavior
 * Hazard detection and forwarding logic
 
-### Simulation
-
-*Add representative ModelSim waveform screenshots here.*
-
-<!-- Example:
-<img src="docs/images/pipeline_waveform.png" alt="ModelSim Pipeline Simulation" width="100%">
--->
-
 ---
 
 ## Design Highlights
