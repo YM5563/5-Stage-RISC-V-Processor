@@ -11,13 +11,39 @@ module Core_tb;
 
 
 bit [31:0] test_instructions [] = {
+
+  //Simple functional testing
+    32'h00000000// = nop
+    32'hfec10493// = addi x9, x2, -20
+    32'h00c58533// = add x10, x11, x12
+    32'h00002403// = lw x8, 0(x0)
+    32'h40618a33// = sub x20, x3, x6
+    32'h01392ab3// = slt x21, x18, x19
+    32'h014005ef// = jal x11, 20
+
   //simple flushing test
     32'h00000000//  = NOP
-    32'h002282b3//  = add x5, x5, x2      → x5 = x5 + x2
-    32'h40760233//  = sub x4, x12, x7     → x4 = x12 - x7
-    32'hff9ff56f//  = jal x10, -8         → x10 = PC+4, jump to PC-8 (back to the add)
-    32'h405202b3//  = sub x5, x4, x5      → x5 = x4 - x5 (should be FLUSHED)
-    32'h00c20313//  = addi x6, x4, 12     → x6 = x4 + 12 (should be FLUSHED)
+    32'h002282b3//  = add x5, x5, x2      x5 = x5 + x2
+    32'h40760233//  = sub x4, x12, x7     x4 = x12 - x7
+    32'hff9ff56f//  = jal x10, -8         x10 = PC+4, jump to PC-8 (back to the add)
+    32'h405202b3//  = sub x5, x4, x5      x5 = x4 - x5 (should be FLUSHED)
+    32'h00c20313//  = addi x6, x4, 12     x6 = x4 + 12 (should be FLUSHED)
+
+  //JAL test
+    32'h00000000 
+    32'h00002783 
+    32'h00178793 
+    32'h0080056f 
+    32'h00a182b3 
+    32'h00a782b3 
+    32'h004005ef 
+    32'h0040066f 
+    32'h00c582b3 
+    32'h003282b3 
+    32'h00c006ef 
+    32'h003a8a33 
+    32'hfd9ff76f 
+    32'h00402683 
 };
 
 
